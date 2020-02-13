@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_nav"
+    app:startDestination="@id/appFragment_one">
+
+    <fragment
+        android:id="@+id/appFragment_one"
+        android:name="com.asus.taxassignment.fragments.AppFragment_one"
+        android:label="fragment_app_fragment_one"
+        tools:layout="@layout/fragment_app_fragment_one" >
+        <action
+            android:id="@+id/action_appFragment_one_to_appFragment_two"
+            app:destination="@id/appFragment_two" />
+        <action
+            android:id="@+id/action_appFragment_one_to_appFragment_three"
+            app:destination="@id/appFragment_three" />
+    </fragment>
+    <fragment
+        android:id="@+id/appFragment_two"
+        android:name="com.asus.taxassignment.fragments.AppFragment_two"
+        android:label="fragment_app_fragment_two"
+        tools:layout="@layout/fragment_app_fragment_two" >
+        <action
+            android:id="@+id/action_appFragment_two_to_appFragment_three"
+            app:destination="@id/appFragment_three" />
+        <action
+            android:id="@+id/action_appFragment_two_to_appFragment_one"
+            app:destination="@id/appFragment_one" />
+    </fragment>
+    <fragment
+        android:id="@+id/appFragment_three"
+        android:name="com.asus.taxassignment.fragments.AppFragment_three"
+        android:label="fragment_app_fragment_three"
+        tools:layout="@layout/fragment_app_fragment_three" >
+        <action
+            android:id="@+id/action_appFragment_three_to_appFragment_one"
+            app:destination="@id/appFragment_one" />
+        <action
+            android:id="@+id/action_appFragment_three_to_appFragment_two"
+            app:destination="@id/appFragment_two" />
+    </fragment>
+</navigation>
